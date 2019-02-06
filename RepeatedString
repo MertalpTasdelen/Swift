@@ -1,0 +1,31 @@
+import Foundation
+
+var s = "a"
+print(s.count)
+var n = 1000
+var newArray: [Character] = []
+var stringArray = Array(s)
+var position = 0
+
+
+if stringArray.count == 1 {
+    print(n)
+} else {
+    for _ in 0 ..< n {
+        newArray.append(stringArray[position])
+        position += 1
+        if position == stringArray.count {
+            position = 0
+        }
+    }
+    
+    print(newArray)
+    var counter = 0
+    for item in 0 ..< newArray.count {
+        if newArray[item] == "a" {
+            counter += 1
+        }
+    }
+    print(counter)
+
+}
