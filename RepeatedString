@@ -29,3 +29,30 @@ if stringArray.count == 1 {
     print(counter)
 
 }
+
+
+//There is better solution upper one is not get full point but this gets the full point from test examples.
+
+var s = "abca"
+var n = 10
+
+var aCountInString = 0
+
+for item in s {
+    if item == "a"{
+        aCountInString += 1
+    }
+}
+
+var additionalWord = n % s.count 
+
+let subString = s.prefix(additionalWord)
+var countInSubString = 0
+
+for item in subString {
+    if item == "a" {
+        countInSubString += 1
+    }
+}
+
+print(((n / s.count) * aCountInString) + countInSubString)
